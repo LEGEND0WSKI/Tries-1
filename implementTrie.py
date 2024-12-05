@@ -1,7 +1,7 @@
-# // Time Complexity :
-# // Space Complexity :
+# // Time Complexity :O(m) for prefix search, insert and delete
+# // Space Complexity :O(m*l) for word and length
 # // Did this code successfully run on Leetcode :Yes
-# // Any problem you faced while coding this :
+# // Any problem you faced while coding this : No
 
 class TrieNode:
     def __init__(self):
@@ -22,7 +22,7 @@ class Trie:
             curr = curr.children[i]                 # next
         curr.isEnd = True 
 
-    def search(self, word: str) -> bool:
+    def search(self, word: str) -> bool:            # search for the word in TrieNode
         curr = self.root
         for char in word:
             i = ord(char) - ord('a')          
